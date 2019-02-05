@@ -25,3 +25,7 @@ The following commands can be executed in the program:
 
 
 -k kill current user’s monitor script processes (i.e. "safeDel.sh –k")
+
+
+The getopts statement is used to implement the command line argument parsing and the select 
+statement is used to implement the menu.
