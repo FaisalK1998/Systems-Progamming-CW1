@@ -1,0 +1,81 @@
+.TH safeDel Manual
+
+.SH NAME
+safeDel \- A Bash Script Utility For Better File Deletion 
+
+.SH SYNOPSIS
+safeDel.sh [-l]
+[-r]
+[-d]
+[-t]
+[-m]
+[-k]
+
+.SH DESCRIPTION
+safeDel must automatically create the user’s trash can directory if it does
+not already exist. safeDel will be both command line driven and menu driven.
+safeDel will display a menu to the user only if the user provides no command
+line options or arguments. The functionality made available to a user using 
+command line options or the menu will be the same.
+
+.SH OPTIONS
+The command line options available will be:
+
+[-l] \- Outputs a list on screen of the trashCan directory with file name, size and file type
+
+[-r] \- Recover, will get a specified file taken from the trashCan directory and places it in the current working directory
+
+[-d] \- Delete, removes the file selected by the user. The user will be asked for each file in turn
+
+[-t] \- Total, displays the total usage of the trashCan directory in bytes
+
+[-w] \- Monitor, starts the monitor script which opens in a new terminal window. This will monitor the creation, change and deletion of files in the directory and update it every 15 seconds
+
+[-k] \- Kill, terminates the monitor script process
+
+.SH FILES
+~/home/student/Desktop/monitor.sh
+
+This file is used to display the monitor process when run
+
+.SH DIAGNOSTICS
+The following diagnostics may be issued:
+
+\- The folder trashCan already exists.
+.RS
+The trashCan directory is already in use
+
+\- TrashCan directory is empty.
+.RE
+The trashCan directory contains no files
+
+\- The file 'fileToRecover' does not exist so can't be recovered.
+.RS
+The file specified has been removed or already recovered
+
+\-TrashCan directory is empty. No files available to recover.
+.RE
+The trashCan directory has no files to recover
+
+\-Not A Valid Choice. Please Choose Either Y/N.
+.RS
+A wrong choice has been entered
+
+\-TrashCan directory is empty. No files available to delete.
+.RE
+The trashCan directory has no files to delete
+
+\-Unknown Option
+.RS
+An invalid option has been entered
+
+\-Data Missing
+.RE
+An option requires more data ex. filename
+
+.SH AUTHOR
+Faisal Khan
+.RE
+Student Number \- S1828698
+
+
